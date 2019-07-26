@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
 
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << '-parameters'
+    }
 
     defaultConfig {
         applicationId "com.jmc.demoapplication"
